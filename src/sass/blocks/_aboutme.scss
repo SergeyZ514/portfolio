@@ -1,0 +1,73 @@
+.aboutme {
+	margin-top: 120px;
+	background-color: #fff;
+	&__wrapper {
+		width: 1040px;
+		margin-right: auto;
+		display: grid;
+		grid-template-columns: 400px 570px;
+		column-gap: 70px;
+	}
+
+	&__myimage {
+		width: 400px;
+		img {
+			width: 100%;
+		}
+	}
+
+	&__myname {
+	}
+
+	&__myname-title {
+		position: relative;
+		@include before_circle;
+		z-index: 1;
+		padding-left: 12px;
+	}
+
+	&__divider {
+		width: 60px;
+		height: 3px;
+		background-color: $main_color;
+		margin-bottom: 20px;
+	}
+	&__descr {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 21px;
+		color: #000000;
+		margin-bottom: 40px;
+	}
+
+	&__skills-wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 260px);
+		column-gap: 50px;
+		row-gap: 20px;
+	}
+
+	&__skill {
+		padding-left: 60px;
+		position: relative;
+		@include before_circle;
+		z-index: 1;
+		&::before {
+			top: 0;
+			left: 0;
+		}
+	}
+
+	&__svg {
+		position: absolute;
+		left: 18px;
+		top: 15px;
+	}
+
+	&__skill-descr {
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 18px;
+		color: #000000;
+	}
+}
