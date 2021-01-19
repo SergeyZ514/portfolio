@@ -1,0 +1,98 @@
+.skills {
+	margin-top: 120px;
+	background-color: #ffffff;
+	&__title {
+		text-align: center;
+		position: relative;
+		z-index: 1;
+		@include before_circle;
+		&::before {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	&__subtitle {
+		text-align: center;
+	}
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(4, 270px);
+		grid-template-rows: repeat(2, 270px);
+		grid-auto-rows: 270px;
+		gap: 13px;
+		margin-bottom: 120px;
+	}
+	&__item {
+		border: 1px solid #000000;
+		padding: 115px 30px 25px 30px;
+		position: relative;
+		&-img {
+			position: absolute;
+			left: 30px;
+			top: 30px;
+			&_top45 {
+				top: 45px;
+			}
+			&_top38 {
+				top: 38px;
+			}
+		}
+		&-title {
+			margin-bottom: 15px;
+		}
+		&-text {
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 18px;
+			text-align: left;
+			color: #000000;
+			margin: 0;
+		}
+	}
+	&__scales-wrapper {
+		display: grid;
+		grid-template-columns: repeat(3, 350px);
+		grid-template-rows: repeat(2, 70px);
+		grid-auto-rows: 70px;
+		column-gap: 45px;
+		row-gap: 30px;
+	}
+	&__scales {
+		padding-top: 8px;
+		position: relative;
+		&-title {
+			position: relative;
+			z-index: 1;
+			padding-left: 14px;
+			margin-bottom: 27px;
+			@include before_circle;
+			&::before {
+				top: -7px;
+			}
+		}
+		&-percent {
+			display: inline;
+			position: absolute;
+			font-size: 14px;
+			line-height: 21px;
+			color: #000000;
+			top: 8px;
+			right: 4px;
+		}
+	}
+	&__scale {
+		width: 350px;
+		height: 14px;
+		background: #e8e4de;
+		border-radius: 4px;
+		&_fill {
+			display: block;
+			height: 100%;
+			border-radius: 4px;
+			background-color: $main_color;
+		}
+	}
+	.divider {
+		margin-bottom: 60px;
+	}
+}
