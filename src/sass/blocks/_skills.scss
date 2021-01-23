@@ -4,9 +4,8 @@
 
 	&__wrapper {
 		display: grid;
-		grid-template-columns: repeat(4, 270px);
-		grid-template-rows: repeat(2, 270px);
-		grid-auto-rows: 270px;
+		grid-template: repeat(2, minmax(270px, auto)) / repeat(4, 270px);
+		grid-auto-rows: minmax(270px, auto);
 		gap: 13px;
 		margin-bottom: 120px;
 	}
@@ -39,11 +38,12 @@
 	}
 	&__scales-wrapper {
 		display: grid;
-		grid-template-columns: repeat(3, 350px);
+		grid-template-columns: repeat(auto-fit, 350px);
 		grid-template-rows: repeat(2, 70px);
-		grid-auto-rows: 70px;
-		column-gap: 45px;
+		grid-auto-rows: minmax(70px, auto);
+		justify-content: space-between;
 		row-gap: 30px;
+		column-gap: 45px;
 	}
 	&__scales {
 		padding-top: 8px;
